@@ -57,7 +57,7 @@ export default function HomePage() {
         <div className="relative z-20 text-center px-6 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight secretWeapon">
             You’ve found your digital{" "}
-            <span className="bg-red-400 px-2 rounded-lg text-white">secret weapon.</span>
+            <span className="secretWeapon">secret weapon.</span>
           </h1>
 
           <p className="text-lg md:text-xl mt-4 font-semibold text-gray-700">
