@@ -80,34 +80,24 @@ export default function Navbar() {
                 </Link>
 
                 {/* SERVICES DROPDOWN */}
-                <div
-                  className="relative"
-                >
+                <div className="relative">
                   <button
                     className="inline-block px-5 py-2.5 rounded-full
-                    text-[#FF7A7A]
-
-                    transition-all duration-300 ease-out
-                    will-change-transform
-
-                    hover:text-transparent
-                    hover:bg-clip-text
-                    hover:bg-linear-to-r
-                    hover:from-[#FF7A7A]
-                    hover:via-[#C084FC]
-                    hover:to-[#60A5FA]
-
-                    hover:font-semibold
-                    hover:scale-110"
+                    text-[#FF7A7A] transition-all duration-300 ease-out will-change-transform
+                    hover:text-transparent hover:bg-clip-text
+                    hover:bg-linear-to-r hover:from-[#FF7A7A] hover:via-[#C084FC] hover:to-[#60A5FA]
+                    hover:font-semibold hover:scale-110"
                     onClick={() => setDesktopServices(!desktopServices)}
                   >
-                    Services <span className="text-sm">▼</span>
+                    Services <span className="text-sm">{desktopServices ? "▲" : "▼"}</span>
                   </button>
 
                   {desktopServices && (
                     <div className="absolute left-0 top-[120%] w-60 bg-white rounded-2xl shadow-lg p-4 space-y-4 z-50">
+
                       <Link
                         href="/services/ecommerce"
+                        onClick={() => setDesktopServices(false)}
                         className="flex items-center gap-3 hover:opacity-70"
                       >
                         <span className="text-blue-500 text-xl">🛒</span>
@@ -118,6 +108,7 @@ export default function Navbar() {
 
                       <Link
                         href="/services/websites"
+                        onClick={() => setDesktopServices(false)}
                         className="flex items-center gap-3 hover:opacity-70"
                       >
                         <span className="text-red-500 text-xl">🏢</span>
@@ -128,6 +119,7 @@ export default function Navbar() {
 
                       <Link
                         href="/services/web-apps"
+                        onClick={() => setDesktopServices(false)}
                         className="flex items-center gap-3 hover:opacity-70"
                       >
                         <span className="text-pink-500 text-xl">📱</span>
@@ -138,6 +130,7 @@ export default function Navbar() {
 
                       <Link
                         href="/services/ui-ux"
+                        onClick={() => setDesktopServices(false)}
                         className="flex items-center gap-3 hover:opacity-70"
                       >
                         <span className="text-yellow-500 text-xl">✏️</span>
@@ -145,9 +138,11 @@ export default function Navbar() {
                           UI/UX Design
                         </span>
                       </Link>
+
                     </div>
                   )}
                 </div>
+
 
                 <Link
                   className="inline-block px-5 py-2.5 rounded-full

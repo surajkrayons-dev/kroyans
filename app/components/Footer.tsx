@@ -227,8 +227,10 @@ export default function ContactPage() {
                 >
                   {formData.service || "Choose Service"}
 
-                  {/* Arrow */}
-                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-300 text-lg">▼</span>
+                  {/* Arrow controlled by dropdownOpen */}
+                  <span className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-300 text-lg">
+                    {dropdownOpen ? "▲" : "▼"}
+                  </span>
                 </div>
 
                 {/* OPTIONS LIST */}
@@ -239,21 +241,27 @@ export default function ContactPage() {
                       border border-gray-200 overflow-hidden
                     "
                   >
-                    {["Landing Pages", "Ecommerce", "Web Apps", "UI/UX Design", "Maintenance + Hosting"].map((item) => (
-                      <div
-                        key={item}
-                        onClick={() => handleOptionClick(item)}
-                        className="
-                          px-4 py-3 text-blue-400 cursor-pointer
-                          hover:bg-blue-50 transition
-                        "
-                      >
-                        {item}
-                      </div>
-                    ))}
+                    {["Landing Pages", "Ecommerce", "Web Apps", "UI/UX Design", "Maintenance + Hosting"].map(
+                      (item) => (
+                        <div
+                          key={item}
+                          onClick={() => {
+                            handleOptionClick(item); // value set
+                            setDropdownOpen(false);  // dropdown closes
+                          }}
+                          className="
+                            px-4 py-3 text-blue-400 cursor-pointer
+                            hover:bg-blue-50 transition
+                          "
+                        >
+                          {item}
+                        </div>
+                      )
+                    )}
                   </div>
                 )}
               </div>
+
 
               {/* MESSAGE */}
               <div className="md:col-span-2">
