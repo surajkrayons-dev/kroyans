@@ -22,18 +22,20 @@ export default function PostPage() {
       {/* ⭐ HERO SECTION */}
       <section className="fixed inset-0 w-full h-screen bg-white flex flex-col items-center justify-start pt-35 z-1">
         <div className="text-center px-4 max-w-7xl mx-auto z-20">
-          <h6 className="text-lg font-semibold bg-blue-100 text-blue-700 px-4 py-2 rounded-full inline-block">
-            Insights
-          </h6>
+          <div className="inline-block bg-gray-100 px-6 py-3 rounded-full">
+            <h6 className="text-lg font-semibold secretWeapon">
+              Insights
+            </h6>
+          </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold text-blue-900 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold secretWeapon leading-tight">
             Insights and success{" "}
             <span className="px-2 py-1 rounded-lg text-white font-bold bg-linear-to-r from-[#ffb5b5] to-[#975b61] inline-block">
               stories.
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl mt-4 text-blue-500 font-semibold">
+          <p className="text-lg md:text-xl mt-4 foundText font-semibold">
             We stay lean to move fast, stay hands-on, and build platforms that deliver real value.
           </p>
         </div>
@@ -120,12 +122,12 @@ export default function PostPage() {
                   className={`
                     relative flex items-center gap-2 px-6 py-2 rounded-full font-semibold
                     ${isActive
-                      ? "bg-white text-[#0b4bff] shadow-[0_10px_25px_rgba(0,123,255,0.35)]"
+                      ? "secretWeapon shadow-[0_10px_25px_rgba(0,123,255,0.35)]"
                       : "text-blue-700"}
                   `}
                 >
                   {t}
-                  <span className="text-sm px-2 py-0.5 rounded-full font-bold bg-[#0b4bff] text-white">
+                  <span className="text-sm px-2 py-0.5 rounded-full font-bold bg-[#0b4bff] secretWeapon">
                     {count}
                   </span>
                   {isActive && (
