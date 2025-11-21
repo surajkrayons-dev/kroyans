@@ -40,49 +40,44 @@ export default function HomePage() {
   ];
   return (
     <main className="relative">
-      <section
-        className="
-          hero-bg 
-          fixed inset-0 w-full h-screen 
-          flex items-center justify-center 
-          pointer-events-none 
-          bg-center bg-no-repeat 
-          bg-cover 
-          md:bg-cover 
-          lg:bg-cover
-        "
-        style={{
-          backgroundImage: "url('/home-1.png')",
-          zIndex: 1,
-        }}
-      >
-        <div className="absolute inset-0 bg-white opacity-70" />
+      <section className="fixed inset-0 w-full h-screen overflow-hidden flex items-center justify-center z-0">
+        {/* FULL SCREEN BACKGROUND IMAGE */}
+        <Image
+          src="/home-1.png"
+          alt="Home"
+          fill
+          priority
+          className="object-cover w-full h-full"
+        />
 
-        <div className="relative text-center px-4 max-w-3xl z-30 pointer-events-auto">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 flex flex-wrap gap-2 text-center justify-center">
-            <span className="foundText">You’ve</span>
-            <span className="greyGradient">found your</span>
-            <span className="secretWeapon">digital secret weapon.</span>
+        {/* WHITE OVERLAY (ADJUSTABLE) */}
+        <div className="absolute inset-0 bg-white/70" />
+
+        {/* TEXT CONTENT */}
+        <div className="relative z-20 text-center px-6 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight secretWeapon">
+            You’ve found your digital{" "}
+            <span className="bg-red-400 px-2 rounded-lg text-white">secret weapon.</span>
           </h1>
 
-          <p className="text-lg md:text-xl mb-6 text-blue-500 font-semibold">
-            <span className="secretWeapon">Small by choice.</span>{" "}
-            <span className="greyGradient">
-              Sharp by design. We build websites and apps, with
+          <p className="text-lg md:text-xl mt-4 font-semibold text-gray-700">
+            <span className="foundText block">
+              Small by choice. Small by choice. Sharp by design.
             </span>
-            <span className="secretWeapon"> real UX thinking baked in.</span>
-          </p>
 
-          <Link
-            href="#contact-form"
-            className="arrow-loop inline-block bg-blue-700 hover:bg-blue-500 text-white py-2 px-10 rounded-full font-semibold transition duration-300"
-          >
-            Let&apos;s chat!
-          </Link>
+            <span className="greyGradient block mt-2">
+              We build websites and apps,
+            </span>
+
+            <span className="secretWeapon block">
+              with real UX thinking baked in.
+            </span>
+          </p>
         </div>
       </section>
 
       <div className="h-screen"></div>
+
 
       <div className="relative w-full z-20 pointer-events-none mb-0 overflow-visible">
         <svg className="block w-full" viewBox="0 0 1920 260">
