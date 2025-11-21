@@ -32,6 +32,25 @@ a {
 /* ------------------------------------------
  Home
 ------------------------------------------- */
+/* Tablet - show full image */
+@media (max-width: 1024px) {
+  .hero-bg {
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+  }
+}
+
+/* Mobile - best fit, no cropping */
+@media (max-width: 640px) {
+  .hero-bg {
+    background-size: contain !important;
+    background-position: top center !important;
+    background-attachment: fixed !important;
+  }
+}
+
 .foundText {
   font-weight: 800;
   background: linear-gradient(90deg, #ffb3b3, #d98c5a);

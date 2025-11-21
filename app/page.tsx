@@ -41,25 +41,28 @@ export default function HomePage() {
   return (
     <main className="relative">
       <section
-        className="fixed inset-0 w-full h-screen flex items-center justify-center pointer-events-none bg-cover bg-center bg-no-repeat"
-        style={{  backgroundImage: "url('/About Us Hero.webp')", backgroundAttachment: "fixed",  zIndex: 1 }}
+        className="hero-bg fixed inset-0 w-full h-screen flex items-center justify-center pointer-events-none bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/home-1.png')",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          zIndex: 1,
+        }}
       >
         <div className="absolute inset-0 bg-white opacity-70" />
+
         <div className="relative text-center px-4 max-w-3xl z-30 pointer-events-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 flex flex-wrap gap-2 text-center justify-center">
-            <span className="foundText">
-              You’ve
-            </span>
-            <span className="greyGradient">
-              found your
-            </span>
-            <span className="secretWeapon">
-              digital secret weapon.
-            </span>
+            <span className="foundText">You’ve</span>
+            <span className="greyGradient">found your</span>
+            <span className="secretWeapon">digital secret weapon.</span>
           </h1>
 
           <p className="text-lg md:text-xl mb-6 text-blue-500 font-semibold">
-            <span className="secretWeapon">Small by choice.</span> <span className="greyGradient">Sharp by design. We build websites and apps, with</span>
+            <span className="secretWeapon">Small by choice.</span>{" "}
+            <span className="greyGradient">
+              Sharp by design. We build websites and apps, with
+            </span>
             <span className="secretWeapon"> real UX thinking baked in.</span>
           </p>
 
@@ -71,6 +74,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
 
       <div className="h-screen"></div>
 
